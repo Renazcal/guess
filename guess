@@ -14,3 +14,4 @@ while True: #while true runs an infinite loop until the code is broken via the b
 	if guess == x: #self explanatory
 		print("congratulations")
 		break #breaks the infinite loop
+#Caleb Renazco
