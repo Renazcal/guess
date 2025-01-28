@@ -1,0 +1,16 @@
+import random
+print("You must guess a number from 1-10, decimals rounded to the two decimal places are included, program will continue until you get it right")
+#x = round(random.randint(1,10) * random.uniform(0,1),2)
+x = 3.56
+while True: #while true runs an infinite loop until the code is broken via the break command
+	guess = input("Guess a number: ") #input set to guess and a float integer
+	if guess == "stop":
+		break
+	guess = float(guess)
+	if guess > x: #if guess is less than number then print too high or if its more than number then print too low
+		print("too high")
+	if guess < x:
+		print("too low")
+	if guess == x: #self explanatory
+		print("congratulations")
+		break #breaks the infinite loop
