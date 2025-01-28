@@ -1,0 +1,22 @@
+import math
+while True: #infinite loop
+
+	height = float(input("What is your height in feet?: "))#gets weight and height in pounds and feet respectively
+	weight = float(input("What is your weight in pounds?: "))
+	BMI = weight/(height/100)**2 #calculates bmi
+	if BMI < 18.5:
+		print("You are underweight") #if bmi is greater, less than, or equal to, output a certain text.
+	if BMI >= 18.5 and BMI <= 25:
+		print("you are healthy")
+	if BMI > 25:
+		print("You are overweight")
+	
+	height_in_cm = height * 30.48 #converts feet to cm
+	weight_in_kg = weight / 2.20462 # pounds to kg
+	print(f"Your height in cms is: {height_in_cm:.2f}")
+	print(f"Your weight in kgs is: {weight_in_kg:.2f}")
+	g = input("Would you like to enter your numbers again or quit?: ")
+	if g == "Yes" or g == "Quit": # breaks or continues the loop
+		break
+
+#Caleb Renazco
