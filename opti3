@@ -1,0 +1,28 @@
+vowels = ["a", "e", "i", "o", "u"]
+
+while True:  # Start a loop that will keep running until we break
+		x = input("Type in a word: ")
+		max_vowel_streak = 0
+		current = 0
+
+		for i in range(1, len(x)):  # Start from index 1 since we need to compare with the previous char
+				if x[i] in vowels and x[i - 1] in vowels:
+						current += 1  # Increment streak
+				else:
+						current = 0  # Reset streak if vowels are not consecutive
+
+				# Keep track of the maximum streak length
+				max_vowel_streak = max(max_vowel_streak, current)
+
+		print(max_vowel_streak + 1)  # Add 1 to account for the first vowel in the streak
+
+		# Ask  to enter another word
+		again = input("Would you like to enter another word? (Yes/Done): ")
+
+		if again == "Yes":
+				continue  # If Yes, continue the loop and ask for a new word
+
+		if again == "Done":
+				break  # If Done, exit the loop and end the program
+
+#Caleb Renazco
